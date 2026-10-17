@@ -4,6 +4,26 @@
   "private": true,
   "type": "module",
   "description": "npm install, reimagined for AI agents: vets npm releases against the package's own history before an agent installs them",
+  "homepage": "https://github.com/harsha31bs07-blip/dep-bouncer#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harsha31bs07-blip/dep-bouncer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/harsha31bs07-blip/dep-bouncer/issues"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "nitrostack",
+    "npm",
+    "supply-chain-security",
+    "ai-agents",
+    "claude-code",
+    "cursor",
+    "security"
+  ],
   "scripts": {
     "dev": "nitrostack-cli dev",
     "build": "nitrostack-cli build",
