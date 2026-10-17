@@ -4,9 +4,10 @@
  * Central utility for detecting and switching between OpenAI Apps SDK
  * and MCP Apps protocol conventions.
  *
- * Set via the `NITROSTACK_APP_MODE` environment variable:
- *   - 'openai'  (default) — OpenAI Apps SDK / ChatGPT conventions
- *   - 'mcp-app' — MCP Apps spec (Claude, universal MCP hosts)
+ * Set via the `NITROSTACK_APP_MODE` or `APP_MODE` environment variable:
+ *   - 'universal' (default) — Supports both MCP Apps (Claude) and OpenAI Apps SDK (ChatGPT)
+ *   - 'openai'              — OpenAI Apps SDK / ChatGPT conventions only
+ *   - 'mcp-app'             — MCP Apps spec (Claude, universal MCP hosts) only
  *
  * @module
  */
@@ -30,22 +31,26 @@ export const RESOURCE_MIME_TYPE_OPENAI = 'text/html';
 /**
  * Get the current NitroStack app mode from environment.
  *
- * Reads `NITROSTACK_APP_MODE` env variable with lenient parsing:
+ * Reads `NITROSTACK_APP_MODE` or `APP_MODE` env variable with lenient parsing:
+ *   - 'openai', 'chatgpt' → 'openai'
  *   - 'mcp-app', 'mcpapp', 'mcp_app' → 'mcp-app'
  *   - 'universal', 'all', 'both' → 'universal'
- *   - anything else (or unset) → 'openai' (default)
+ *   - anything else (or unset) → 'universal' (default)
  *
  * @returns The active app mode
  */
 export function getAppMode(): AppMode {
-  const raw = process.env.NITROSTACK_APP_MODE?.toLowerCase().trim();
+  const raw = (process.env.NITROSTACK_APP_MODE || process.env.APP_MODE)?.toLowerCase().trim();
+  if (raw === 'openai' || raw === 'chatgpt') {
+    return 'openai';
+  }
   if (raw === 'mcp-app' || raw === 'mcpapp' || raw === 'mcp_app' || raw === 'mcp app') {
     return 'mcp-app';
   }
   if (raw === 'universal' || raw === 'all' || raw === 'both') {
     return 'universal';
   }
-  return 'openai';
+  return 'universal';
 }
 
 /**

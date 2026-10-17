@@ -247,7 +247,17 @@ export type {
   LifecycleHookOptions,
 } from './lifecycle.js';
 
-// ========== MCP Apps / OpenAI Apps SDK Constants ==========
+// ========== MCP Apps / OpenAI Apps SDK Constants & App Mode ==========
+export {
+  getAppMode,
+  isMcpAppMode,
+  isOpenAiMode,
+  getWidgetMimeType,
+  RESOURCE_MIME_TYPE_MCP_APP,
+  RESOURCE_MIME_TYPE_OPENAI,
+} from './app-mode.js';
+export type { AppMode } from './app-mode.js';
+
 /**
  * MIME type for MCP Apps widgets
  * Compatible with both MCP Apps spec and OpenAI Apps SDK
