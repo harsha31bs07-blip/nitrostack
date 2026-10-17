@@ -31,12 +31,21 @@ export class NewDepsSignal implements Signal {
     const ownScope = scopeOf(ctx.name);
     const optional = new Set(Object.keys(ctx.target.optionalDependencies ?? {}));
     const all = Object.keys(now).filter((d) => !Object.hasOwn(before, d));
-    const own = all.filter((d) => ownScope && d.startsWith(ownScope));
-    const added = all.filter((d) => !ownScope || !d.startsWith(ownScope));
+    const specs = new Map(all.map(name => [name, registrySpec(name, now[name])]));
+    const own = all.filter(d => ownScope && d.startsWith(ownScope) && specs.get(d)?.name === d);
+    const added = all.filter(d => specs.get(d) && !own.includes(d));
+    const out: Finding[] = all.filter(d => !specs.get(d)).map(name => ({
+      ...finding(this.id, 'high', `New dependency ${name}: non-registry dependency spec`,
+        [`${name}@${now[name]} cannot be verified against the npm registry`]), incomplete: true,
+    }));
     const stopped = () => ctx.signal?.aborted || (ctx.deadline !== undefined && Date.now() >= ctx.deadline);
     if (!all.length) return [];
 
     const referenced = stopped() ? null : await this.referencedNames(ctx, added.slice(0, MAX_LOOKUPS));
+    if (referenced === null && added.some(name => !optional.has(name))) {
+      out.push({ ...finding(this.id, 'warn', 'New dependency import check incomplete',
+        ['Package source could not be examined for dependency imports']), incomplete: true });
+    }
     const popular = await loadPopularPackages();
     const checkedAt = ctx.reconstructed
       ? REPLAY_NOW(ctx.time[ctx.target.version])
@@ -47,21 +56,23 @@ export class NewDepsSignal implements Signal {
     const pending = added.slice(0, MAX_LOOKUPS);
     let next = 0;
     const inspect = async (name: string) => {
+      const spec = specs.get(name)!;
       let info: PackageInfo | null | undefined;
+      let error = 'Registry lookup unavailable';
       try {
-        info = ctx.lookupPackage ? await ctx.lookupPackage(name, now[name]) : undefined;
-      } catch {
+        info = ctx.lookupPackage ? await ctx.lookupPackage(spec.name, spec.range) : undefined;
+      } catch (err) {
+        error = err instanceof Error ? err.message : String(err);
         info = undefined;
       }
       examined++;
-      const manifest = info?.resolved ?? info?.latest;
-      const owner = ctx.target._npmUser?.name;
-      if (!info?.knownMalicious && owner && manifest?._npmUser?.name === owner) {
-        own.push(name);
+      if (info === undefined) {
+        out.push({ ...finding(this.id, 'warn', `New dependency ${name} check incomplete: registry lookup failed`,
+          [error]), incomplete: true });
         return;
       }
       // Optional platform packages are resolved by computed name, so "never imported" is normal.
-      verdicts.push(this.judge(name, now[name], info, optional.has(name) ? null : referenced, popular, checkedAt));
+      verdicts.push(this.judge(spec.name, spec.range, info, optional.has(name) ? null : referenced, popular, checkedAt, name));
     };
     await Promise.all(Array.from({ length: Math.min(LOOKUP_CONCURRENCY, pending.length) }, async () => {
       while (!stopped() && next < pending.length) {
@@ -69,11 +80,10 @@ export class NewDepsSignal implements Signal {
       }
     }));
 
-    const out: Finding[] = [];
     const unexamined = added.length - examined;
-    if (unexamined) out.push(finding(this.id, 'warn', `${unexamined} new dependencies not examined`,
-      [stopped() ? 'Dependency check deadline exceeded or cancelled' : `Lookup limit: ${MAX_LOOKUPS}`]));
-    if (own.length) out.push(finding(this.id, 'info', `${own.length} new dependencies from the project's own scope or publisher`,
+    if (unexamined) out.push({ ...finding(this.id, 'warn', `${unexamined} new dependencies not examined`,
+      [stopped() ? 'Dependency check deadline exceeded or cancelled' : `Lookup limit: ${MAX_LOOKUPS}`]), incomplete: true });
+    if (own.length) out.push(finding(this.id, 'info', `${own.length} new dependencies from the project's own scope`,
       [own.slice(0, 8).join(', ')]));
     for (const v of verdicts.sort((a, b) => b.score - a.score)) {
       if (v.score >= 3) {
@@ -119,6 +129,7 @@ export class NewDepsSignal implements Signal {
     referenced: Set<string> | null,
     popular: string[],
     checkedAt: string,
+    importName = name,
   ): DepVerdict {
     const reasons: string[] = [];
     let score = 0;
@@ -153,7 +164,7 @@ export class NewDepsSignal implements Signal {
       score++;
       reasons.push(`name looks like the popular package ${lookalike.name} (${lookalike.kind})`);
     }
-    if (referenced && !referenced.has(name)) {
+    if (referenced && !referenced.has(importName)) {
       score++;
       reasons.push(`no file in the package imports ${name} (phantom dependency)`);
     }
@@ -182,6 +193,19 @@ export class NewDepsSignal implements Signal {
       return null;
     }
   }
+}
+
+/** Resolve npm aliases; protocols, paths, repository shorthands and archives are unverifiable. */
+function registrySpec(name: string, raw: string): { name: string; range: string } | null {
+  let range = raw.trim();
+  if (range.startsWith('npm:')) {
+    const alias = /^npm:((?:@[^/\s]+\/)?[^@/\s]+)(?:@(.+))?$/.exec(range);
+    if (!alias) return null;
+    name = alias[1];
+    range = alias[2] ?? '*';
+  }
+  if (/^[a-z][a-z\d+.-]*:|[/\\]|^\.{1,2}$|^~$|\.(?:tgz|tar\.gz)(?:[?#].*)?$/i.test(range)) return null;
+  return { name, range };
 }
 
 function scopeOf(name: string): string | undefined {

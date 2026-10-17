@@ -19,7 +19,7 @@ function pack(name = 'fixture', versions = ['1.0.0', '2.0.0', '3.0.0']): Packume
 }
 const clean: AdvisoryLookup = { available: true, advisories: [] };
 const malware: AdvisoryLookup = { available: true, advisories: [{ id: 'MAL-test', malicious: true }] };
-const incomplete = (title = 'Code comparison incomplete: unavailable'): Finding => ({ signal: 'code-diff', severity: 'info', title, evidence: [], weight: 0 });
+const incomplete = (title = 'Code comparison incomplete: unavailable'): Finding => ({ signal: 'code-diff', severity: 'info', title, evidence: [], weight: 0, incomplete: true });
 
 function harness(p = pack(), options: {
   analyze?: (ctx: AnalysisContext) => Promise<Finding[]>;
@@ -59,21 +59,28 @@ test('safeVersion and automatic fallbacks run OSV for every candidate', async ()
 });
 
 test('safe candidates exclude incomplete zero-weight findings and unavailable OSV', async () => {
-  for (const title of ['Code comparison incomplete: download failed', 'check incomplete: deadline']) {
+  for (const title of ['Code comparison incomplete: download failed', 'check incomplete: deadline',
+    'code-diff check incomplete: timed out', 'new-deps check incomplete: timed out', 'Arbitrary coverage title']) {
     const { service } = harness(pack(), { analyze: async ctx => ctx.target.version === '1.0.0' ? [] : [incomplete(title)] });
     assert.equal((await service.safeVersion('fixture')).safeVersion, '1.0.0');
-    assert.equal((await service.checkPackage('fixture', '3.0.0')).verdict, 'ALLOW');
+    const report = await service.checkPackage('fixture', '3.0.0');
+    assert.equal(report.verdict, 'REVIEW');
+    assert.equal(report.incomplete, true);
+    assert.equal(report.safeVersion?.version, '1.0.0');
   }
   const { service } = harness(pack(), { query: () => ({ available: false, advisories: [] }) });
   assert.equal((await service.safeVersion('fixture')).safeVersion, undefined);
+  const report = await service.checkPackage('fixture');
+  assert.equal(report.verdict, 'REVIEW');
+  assert.ok(report.findings.some(f => f.incomplete && f.signal === 'known-advisory'));
 });
 
-test('date-fns-like incomplete coverage alone allows with its warning but is never recommended', async () => {
+test('date-fns-like incomplete coverage requires REVIEW without changing its weight', async () => {
   const warning: Finding = { signal: 'code-diff', severity: 'warn', weight: 15,
-    title: 'Code comparison incomplete: Tarball exceeds 5000 files', evidence: [] };
+    title: 'Code comparison incomplete: Tarball exceeds 5000 files', evidence: [], incomplete: true };
   const { service } = harness(pack(), { analyze: async () => [warning] });
   const report = await service.checkPackage('fixture');
-  assert.equal(report.verdict, 'ALLOW');
+  assert.equal(report.verdict, 'REVIEW');
   assert.equal(report.score, 15);
   assert.deepEqual(report.findings, [warning]);
   assert.equal((await service.safeVersion('fixture')).safeVersion, undefined);
@@ -215,8 +222,7 @@ test('implicit native installs remain visible for blocked, incomplete and failed
       files: async () => new Map([['binding.gyp', Buffer.from('{}')]]),
     });
     const review = (await service.reviewInstallScripts([{ name: 'fixture' }])).packages[0];
-    // A zero-weight incomplete note alone no longer forces the release into REVIEW.
-    assert.equal(review.recommendation, blocked ? 'DENY' : 'APPROVE');
+    assert.equal(review.recommendation, blocked ? 'DENY' : 'REVIEW');
     assert.equal(review.scripts.install, 'node-gyp rebuild');
     assert.match(review.reasons.join(' '), /binding.gyp/);
   }

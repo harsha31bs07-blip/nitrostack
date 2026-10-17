@@ -18,6 +18,8 @@ export interface Finding {
   evidence: string[];
   /** Contribution to the risk score (0-100). */
   weight: number;
+  /** Coverage was incomplete; this release cannot be allowed or recommended as safe. */
+  incomplete?: true;
 }
 
 /** Subset of an npm per-version manifest (registry.npmjs.org/<name>/<version>). */

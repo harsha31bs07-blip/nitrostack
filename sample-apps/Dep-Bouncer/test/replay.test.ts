@@ -85,10 +85,33 @@ test('signal timeout warns about incomplete coverage and prevents further depend
   t.mock.timers.tick(25_000);
   const result = await pending;
   assert.ok(result.findings.some(f => f.signal === 'new-deps' && f.severity === 'warn' && f.weight === 15
-    && f.title === 'new-deps check incomplete: timed out'));
+    && f.title === 'new-deps check incomplete: timed out' && f.incomplete));
   const startedBeforeTimeout = calls.length;
   assert.ok(startedBeforeTimeout <= 5, `at most one batch of 5 lookups, got ${startedBeforeTimeout}`);
   for (const release of releases.splice(0)) release();
   await new Promise<void>(resolve => setImmediate(resolve));
   assert.equal(calls.length, startedBeforeTimeout, 'no lookup starts after the timeout');
+});
+
+test('a single timed-out signal raises an otherwise clean release to REVIEW', async t => {
+  t.mock.timers.enable({ apis: ['setTimeout', 'Date'], now: Date.now() });
+  const deps = new NewDepsSignal();
+  t.mock.method(deps, 'evaluate', async () => new Promise<never>(() => {}));
+  const name = new NameCheckSignal();
+  t.mock.method(name, 'evaluate', async () => []);
+  const service = new AnalysisService(new ProvenanceDropSignal(), new PublisherChangeSignal(),
+    new InstallScriptSignal(), deps, new ReleaseTimingSignal(), new CodeDiffSignal(), name);
+  const target = { name: 'fixture', version: '2.0.0', dist: { tarball: '' } };
+  const pending = service.analyze({ name: 'fixture', target,
+    baseline: [{ ...target, version: '1.0.0' }], time: { '2.0.0': '2020-01-02T00:00:00Z' },
+    loadFiles: async () => new Map() });
+  // Let the remaining signals finish before expiring only the deliberately stalled signal.
+  await new Promise<void>(resolve => setImmediate(resolve));
+  t.mock.timers.tick(25_000);
+  const result = await pending;
+  assert.equal(result.verdict, 'REVIEW');
+  assert.equal(result.score, 15);
+  assert.equal(result.findings.length, 1);
+  assert.equal(result.findings[0].incomplete, true);
+  assert.equal(result.findings[0].title, 'new-deps check incomplete: timed out');
 });

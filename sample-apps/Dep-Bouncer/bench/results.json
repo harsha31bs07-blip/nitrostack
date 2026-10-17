@@ -11,8 +11,8 @@
       "Provenance dropped: previous release 1.14.0 was built and signed by CI, this one was not",
       "Published by the personal account \"jasonsaayman\" instead of the package's CI (trusted publishing)"
     ],
-    "durationMs": 70,
-    "timestamp": "2026-10-16T17:39:46.493Z"
+    "durationMs": 65,
+    "timestamp": "2026-10-17T03:25:26.723Z"
   },
   {
     "kind": "replay",
@@ -26,8 +26,8 @@
       "Suspicious ai-agent-abuse in release code",
       "Suspicious obfuscation in release code"
     ],
-    "durationMs": 102,
-    "timestamp": "2026-10-16T17:39:46.865Z"
+    "durationMs": 101,
+    "timestamp": "2026-10-17T03:25:27.103Z"
   },
   {
     "kind": "replay",
@@ -42,7 +42,7 @@
       "New publisher \"qix\" has never released this package before"
     ],
     "durationMs": 7,
-    "timestamp": "2026-10-16T17:39:47.271Z"
+    "timestamp": "2026-10-17T03:25:27.516Z"
   },
   {
     "kind": "replay",
@@ -56,8 +56,8 @@
       "Suspicious exfil in release code",
       "Suspicious ai-agent-abuse in release code"
     ],
-    "durationMs": 24,
-    "timestamp": "2026-10-16T17:39:47.583Z"
+    "durationMs": 22,
+    "timestamp": "2026-10-17T03:25:27.833Z"
   },
   {
     "kind": "replay",
@@ -71,8 +71,8 @@
       "Suspicious exfil in release code",
       "Suspicious persistence in release code"
     ],
-    "durationMs": 102,
-    "timestamp": "2026-10-16T17:39:47.909Z"
+    "durationMs": 80,
+    "timestamp": "2026-10-17T03:25:28.165Z"
   },
   {
     "kind": "popular",
@@ -82,8 +82,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1087,
-    "timestamp": "2026-10-16T17:39:48.314Z"
+    "durationMs": 1919,
+    "timestamp": "2026-10-17T03:25:28.546Z"
   },
   {
     "kind": "popular",
@@ -93,8 +93,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1390,
-    "timestamp": "2026-10-16T17:39:49.711Z"
+    "durationMs": 1440,
+    "timestamp": "2026-10-17T03:25:30.775Z"
   },
   {
     "kind": "popular",
@@ -104,8 +104,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1476,
-    "timestamp": "2026-10-16T17:39:51.405Z"
+    "durationMs": 1568,
+    "timestamp": "2026-10-17T03:25:32.522Z"
   },
   {
     "kind": "popular",
@@ -117,8 +117,8 @@
     "findings": [
       "9 versions published within 6 h"
     ],
-    "durationMs": 678,
-    "timestamp": "2026-10-16T17:39:53.194Z"
+    "durationMs": 462,
+    "timestamp": "2026-10-17T03:25:34.396Z"
   },
   {
     "kind": "popular",
@@ -128,8 +128,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 468,
-    "timestamp": "2026-10-16T17:39:54.177Z"
+    "durationMs": 1430,
+    "timestamp": "2026-10-17T03:25:35.174Z"
   },
   {
     "kind": "popular",
@@ -139,8 +139,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1437,
-    "timestamp": "2026-10-16T17:39:54.956Z"
+    "durationMs": 441,
+    "timestamp": "2026-10-17T03:25:36.906Z"
   },
   {
     "kind": "popular",
@@ -150,8 +150,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 437,
-    "timestamp": "2026-10-16T17:39:56.697Z"
+    "durationMs": 1388,
+    "timestamp": "2026-10-17T03:25:37.653Z"
   },
   {
     "kind": "popular",
@@ -161,8 +161,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1537,
-    "timestamp": "2026-10-16T17:39:57.443Z"
+    "durationMs": 1455,
+    "timestamp": "2026-10-17T03:25:39.357Z"
   },
   {
     "kind": "popular",
@@ -172,8 +172,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1703,
-    "timestamp": "2026-10-16T17:39:59.294Z"
+    "durationMs": 1591,
+    "timestamp": "2026-10-17T03:25:41.122Z"
   },
   {
     "kind": "popular",
@@ -183,8 +183,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1512,
-    "timestamp": "2026-10-16T17:40:01.303Z"
+    "durationMs": 1772,
+    "timestamp": "2026-10-17T03:25:43.013Z"
   },
   {
     "kind": "popular",
@@ -194,8 +194,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1388,
-    "timestamp": "2026-10-16T17:40:03.127Z"
+    "durationMs": 1479,
+    "timestamp": "2026-10-17T03:25:45.090Z"
   },
   {
     "kind": "popular",
@@ -205,8 +205,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1430,
-    "timestamp": "2026-10-16T17:40:04.818Z"
+    "durationMs": 1342,
+    "timestamp": "2026-10-17T03:25:46.884Z"
   },
   {
     "kind": "popular",
@@ -216,8 +216,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1407,
-    "timestamp": "2026-10-16T17:40:06.549Z"
+    "durationMs": 1366,
+    "timestamp": "2026-10-17T03:25:48.528Z"
   },
   {
     "kind": "popular",
@@ -227,8 +227,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1431,
-    "timestamp": "2026-10-16T17:40:08.264Z"
+    "durationMs": 1416,
+    "timestamp": "2026-10-17T03:25:50.196Z"
   },
   {
     "kind": "popular",
@@ -238,8 +238,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1442,
-    "timestamp": "2026-10-16T17:40:10.007Z"
+    "durationMs": 1372,
+    "timestamp": "2026-10-17T03:25:51.912Z"
   },
   {
     "kind": "popular",
@@ -249,8 +249,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 428,
-    "timestamp": "2026-10-16T17:40:11.754Z"
+    "durationMs": 1396,
+    "timestamp": "2026-10-17T03:25:53.594Z"
   },
   {
     "kind": "popular",
@@ -260,10 +260,10 @@
     "verdict": "ALLOW",
     "score": 15,
     "findings": [
-      "Published 15 min ago"
+      "Published 10 h ago"
     ],
-    "durationMs": 464,
-    "timestamp": "2026-10-16T17:40:12.490Z"
+    "durationMs": 1525,
+    "timestamp": "2026-10-17T03:25:55.293Z"
   },
   {
     "kind": "popular",
@@ -273,8 +273,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1519,
-    "timestamp": "2026-10-16T17:40:13.255Z"
+    "durationMs": 1443,
+    "timestamp": "2026-10-17T03:25:57.130Z"
   },
   {
     "kind": "popular",
@@ -284,8 +284,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1664,
-    "timestamp": "2026-10-16T17:40:15.078Z"
+    "durationMs": 506,
+    "timestamp": "2026-10-17T03:25:58.887Z"
   },
   {
     "kind": "popular",
@@ -295,8 +295,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1439,
-    "timestamp": "2026-10-16T17:40:17.053Z"
+    "durationMs": 604,
+    "timestamp": "2026-10-17T03:25:59.701Z"
   },
   {
     "kind": "popular",
@@ -308,8 +308,8 @@
     "findings": [
       "New publisher \"hmanilla\" has never released this package before"
     ],
-    "durationMs": 488,
-    "timestamp": "2026-10-16T17:40:18.802Z"
+    "durationMs": 1350,
+    "timestamp": "2026-10-17T03:26:00.609Z"
   },
   {
     "kind": "popular",
@@ -319,8 +319,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1351,
-    "timestamp": "2026-10-16T17:40:19.593Z"
+    "durationMs": 687,
+    "timestamp": "2026-10-17T03:26:02.276Z"
   },
   {
     "kind": "popular",
@@ -330,8 +330,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 2035,
-    "timestamp": "2026-10-16T17:40:21.249Z"
+    "durationMs": 1631,
+    "timestamp": "2026-10-17T03:26:03.263Z"
   },
   {
     "kind": "popular",
@@ -341,8 +341,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1378,
-    "timestamp": "2026-10-16T17:40:23.595Z"
+    "durationMs": 1417,
+    "timestamp": "2026-10-17T03:26:05.196Z"
   },
   {
     "kind": "popular",
@@ -352,8 +352,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1417,
-    "timestamp": "2026-10-16T17:40:25.276Z"
+    "durationMs": 1377,
+    "timestamp": "2026-10-17T03:26:06.924Z"
   },
   {
     "kind": "popular",
@@ -363,8 +363,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1405,
-    "timestamp": "2026-10-16T17:40:26.997Z"
+    "durationMs": 1353,
+    "timestamp": "2026-10-17T03:26:08.605Z"
   },
   {
     "kind": "popular",
@@ -374,8 +374,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1388,
-    "timestamp": "2026-10-16T17:40:28.714Z"
+    "durationMs": 1436,
+    "timestamp": "2026-10-17T03:26:10.273Z"
   },
   {
     "kind": "popular",
@@ -385,8 +385,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1146,
-    "timestamp": "2026-10-16T17:40:30.403Z"
+    "durationMs": 949,
+    "timestamp": "2026-10-17T03:26:12.016Z"
   },
   {
     "kind": "popular",
@@ -396,8 +396,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 427,
-    "timestamp": "2026-10-16T17:40:31.856Z"
+    "durationMs": 1371,
+    "timestamp": "2026-10-17T03:26:13.273Z"
   },
   {
     "kind": "popular",
@@ -407,8 +407,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1422,
-    "timestamp": "2026-10-16T17:40:32.589Z"
+    "durationMs": 731,
+    "timestamp": "2026-10-17T03:26:14.953Z"
   },
   {
     "kind": "popular",
@@ -418,8 +418,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 66749,
-    "timestamp": "2026-10-16T17:40:34.321Z"
+    "durationMs": 66656,
+    "timestamp": "2026-10-17T03:26:15.990Z"
   },
   {
     "kind": "popular",
@@ -429,8 +429,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1397,
-    "timestamp": "2026-10-16T17:41:41.385Z"
+    "durationMs": 1610,
+    "timestamp": "2026-10-17T03:27:22.959Z"
   },
   {
     "kind": "popular",
@@ -440,8 +440,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1432,
-    "timestamp": "2026-10-16T17:41:43.084Z"
+    "durationMs": 1471,
+    "timestamp": "2026-10-17T03:27:24.879Z"
   },
   {
     "kind": "popular",
@@ -451,8 +451,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1353,
-    "timestamp": "2026-10-16T17:41:44.817Z"
+    "durationMs": 1408,
+    "timestamp": "2026-10-17T03:27:26.655Z"
   },
   {
     "kind": "popular",
@@ -462,8 +462,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1366,
-    "timestamp": "2026-10-16T17:41:46.484Z"
+    "durationMs": 1391,
+    "timestamp": "2026-10-17T03:27:28.364Z"
   },
   {
     "kind": "popular",
@@ -473,8 +473,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1389,
-    "timestamp": "2026-10-16T17:41:48.155Z"
+    "durationMs": 2423,
+    "timestamp": "2026-10-17T03:27:30.062Z"
   },
   {
     "kind": "popular",
@@ -484,8 +484,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1372,
-    "timestamp": "2026-10-16T17:41:49.847Z"
+    "durationMs": 1441,
+    "timestamp": "2026-10-17T03:27:32.792Z"
   },
   {
     "kind": "popular",
@@ -495,8 +495,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 650,
-    "timestamp": "2026-10-16T17:41:51.531Z"
+    "durationMs": 1349,
+    "timestamp": "2026-10-17T03:27:34.539Z"
   },
   {
     "kind": "popular",
@@ -506,8 +506,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1460,
-    "timestamp": "2026-10-16T17:41:52.488Z"
+    "durationMs": 599,
+    "timestamp": "2026-10-17T03:27:36.189Z"
   },
   {
     "kind": "popular",
@@ -517,8 +517,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1331,
-    "timestamp": "2026-10-16T17:41:54.252Z"
+    "durationMs": 1416,
+    "timestamp": "2026-10-17T03:27:37.091Z"
   },
   {
     "kind": "popular",
@@ -528,8 +528,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1368,
-    "timestamp": "2026-10-16T17:41:55.887Z"
+    "durationMs": 1356,
+    "timestamp": "2026-10-17T03:27:38.819Z"
   },
   {
     "kind": "popular",
@@ -539,8 +539,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1392,
-    "timestamp": "2026-10-16T17:41:57.565Z"
+    "durationMs": 1507,
+    "timestamp": "2026-10-17T03:27:40.477Z"
   },
   {
     "kind": "popular",
@@ -550,8 +550,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1490,
-    "timestamp": "2026-10-16T17:41:59.269Z"
+    "durationMs": 1418,
+    "timestamp": "2026-10-17T03:27:42.288Z"
   },
   {
     "kind": "popular",
@@ -565,8 +565,8 @@
       "Suspicious exec in release code",
       "Suspicious obfuscation in release code"
     ],
-    "durationMs": 10261,
-    "timestamp": "2026-10-16T17:42:01.070Z"
+    "durationMs": 11750,
+    "timestamp": "2026-10-17T03:27:44.019Z"
   },
   {
     "kind": "popular",
@@ -576,8 +576,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1348,
-    "timestamp": "2026-10-16T17:42:11.646Z"
+    "durationMs": 1388,
+    "timestamp": "2026-10-17T03:27:56.080Z"
   },
   {
     "kind": "popular",
@@ -585,12 +585,10 @@
     "package": "js-yaml",
     "version": "5.5.0",
     "verdict": "ALLOW",
-    "score": 15,
-    "findings": [
-      "Published 18.2 h ago"
-    ],
-    "durationMs": 699,
-    "timestamp": "2026-10-16T17:42:13.296Z"
+    "score": 0,
+    "findings": [],
+    "durationMs": 1353,
+    "timestamp": "2026-10-17T03:27:57.784Z"
   },
   {
     "kind": "popular",
@@ -600,8 +598,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1388,
-    "timestamp": "2026-10-16T17:42:14.306Z"
+    "durationMs": 1406,
+    "timestamp": "2026-10-17T03:27:59.441Z"
   },
   {
     "kind": "popular",
@@ -611,8 +609,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1368,
-    "timestamp": "2026-10-16T17:42:15.996Z"
+    "durationMs": 505,
+    "timestamp": "2026-10-17T03:28:01.151Z"
   },
   {
     "kind": "popular",
@@ -622,8 +620,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1400,
-    "timestamp": "2026-10-16T17:42:17.676Z"
+    "durationMs": 1401,
+    "timestamp": "2026-10-17T03:28:01.966Z"
   },
   {
     "kind": "popular",
@@ -633,8 +631,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1463,
-    "timestamp": "2026-10-16T17:42:19.382Z"
+    "durationMs": 506,
+    "timestamp": "2026-10-17T03:28:03.678Z"
   },
   {
     "kind": "popular",
@@ -644,8 +642,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 2404,
-    "timestamp": "2026-10-16T17:42:21.158Z"
+    "durationMs": 2418,
+    "timestamp": "2026-10-17T03:28:04.494Z"
   },
   {
     "kind": "popular",
@@ -655,8 +653,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 425,
-    "timestamp": "2026-10-16T17:42:23.864Z"
+    "durationMs": 1424,
+    "timestamp": "2026-10-17T03:28:07.226Z"
   },
   {
     "kind": "popular",
@@ -666,8 +664,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1371,
-    "timestamp": "2026-10-16T17:42:24.598Z"
+    "durationMs": 496,
+    "timestamp": "2026-10-17T03:28:08.966Z"
   },
   {
     "kind": "popular",
@@ -677,8 +675,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1390,
-    "timestamp": "2026-10-16T17:42:26.284Z"
+    "durationMs": 691,
+    "timestamp": "2026-10-17T03:28:09.769Z"
   },
   {
     "kind": "popular",
@@ -688,8 +686,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 464,
-    "timestamp": "2026-10-16T17:42:27.974Z"
+    "durationMs": 1397,
+    "timestamp": "2026-10-17T03:28:10.773Z"
   },
   {
     "kind": "popular",
@@ -697,12 +695,10 @@
     "package": "argparse",
     "version": "3.0.3",
     "verdict": "ALLOW",
-    "score": 15,
-    "findings": [
-      "Published 19.7 h ago"
-    ],
-    "durationMs": 471,
-    "timestamp": "2026-10-16T17:42:28.742Z"
+    "score": 0,
+    "findings": [],
+    "durationMs": 1391,
+    "timestamp": "2026-10-17T03:28:12.487Z"
   },
   {
     "kind": "popular",
@@ -712,8 +708,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 461,
-    "timestamp": "2026-10-16T17:42:29.520Z"
+    "durationMs": 1555,
+    "timestamp": "2026-10-17T03:28:14.180Z"
   },
   {
     "kind": "popular",
@@ -723,8 +719,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 509,
-    "timestamp": "2026-10-16T17:42:30.284Z"
+    "durationMs": 1433,
+    "timestamp": "2026-10-17T03:28:16.050Z"
   },
   {
     "kind": "popular",
@@ -734,8 +730,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 470,
-    "timestamp": "2026-10-16T17:42:31.096Z"
+    "durationMs": 2587,
+    "timestamp": "2026-10-17T03:28:17.789Z"
   },
   {
     "kind": "popular",
@@ -745,8 +741,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 499,
-    "timestamp": "2026-10-16T17:42:31.874Z"
+    "durationMs": 1883,
+    "timestamp": "2026-10-17T03:28:20.689Z"
   },
   {
     "kind": "popular",
@@ -756,8 +752,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 66629,
-    "timestamp": "2026-10-16T17:42:32.673Z"
+    "durationMs": 1479,
+    "timestamp": "2026-10-17T03:28:22.876Z"
   },
   {
     "kind": "popular",
@@ -767,8 +763,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1419,
-    "timestamp": "2026-10-16T17:43:39.609Z"
+    "durationMs": 1439,
+    "timestamp": "2026-10-17T03:28:24.666Z"
   },
   {
     "kind": "popular",
@@ -778,8 +774,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 676,
-    "timestamp": "2026-10-16T17:43:41.331Z"
+    "durationMs": 523,
+    "timestamp": "2026-10-17T03:28:26.414Z"
   },
   {
     "kind": "popular",
@@ -789,8 +785,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1365,
-    "timestamp": "2026-10-16T17:43:42.315Z"
+    "durationMs": 1435,
+    "timestamp": "2026-10-17T03:28:27.249Z"
   },
   {
     "kind": "popular",
@@ -800,8 +796,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 594,
-    "timestamp": "2026-10-16T17:43:43.981Z"
+    "durationMs": 1409,
+    "timestamp": "2026-10-17T03:28:28.991Z"
   },
   {
     "kind": "popular",
@@ -811,8 +807,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1425,
-    "timestamp": "2026-10-16T17:43:44.880Z"
+    "durationMs": 1375,
+    "timestamp": "2026-10-17T03:28:30.713Z"
   },
   {
     "kind": "popular",
@@ -822,8 +818,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 433,
-    "timestamp": "2026-10-16T17:43:46.605Z"
+    "durationMs": 1334,
+    "timestamp": "2026-10-17T03:28:32.393Z"
   },
   {
     "kind": "popular",
@@ -833,8 +829,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1344,
-    "timestamp": "2026-10-16T17:43:47.339Z"
+    "durationMs": 1413,
+    "timestamp": "2026-10-17T03:28:34.041Z"
   },
   {
     "kind": "popular",
@@ -844,8 +840,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1433,
-    "timestamp": "2026-10-16T17:43:48.985Z"
+    "durationMs": 1463,
+    "timestamp": "2026-10-17T03:28:35.753Z"
   },
   {
     "kind": "popular",
@@ -855,8 +851,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1395,
-    "timestamp": "2026-10-16T17:43:50.725Z"
+    "durationMs": 1405,
+    "timestamp": "2026-10-17T03:28:37.517Z"
   },
   {
     "kind": "popular",
@@ -866,8 +862,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 423,
-    "timestamp": "2026-10-16T17:43:52.435Z"
+    "durationMs": 1419,
+    "timestamp": "2026-10-17T03:28:39.232Z"
   },
   {
     "kind": "popular",
@@ -877,8 +873,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1373,
-    "timestamp": "2026-10-16T17:43:53.160Z"
+    "durationMs": 1420,
+    "timestamp": "2026-10-17T03:28:40.958Z"
   },
   {
     "kind": "popular",
@@ -888,8 +884,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1375,
-    "timestamp": "2026-10-16T17:43:54.833Z"
+    "durationMs": 1347,
+    "timestamp": "2026-10-17T03:28:42.693Z"
   },
   {
     "kind": "popular",
@@ -899,8 +895,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1332,
-    "timestamp": "2026-10-16T17:43:56.511Z"
+    "durationMs": 1390,
+    "timestamp": "2026-10-17T03:28:44.347Z"
   },
   {
     "kind": "popular",
@@ -910,8 +906,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1476,
-    "timestamp": "2026-10-16T17:43:58.156Z"
+    "durationMs": 1395,
+    "timestamp": "2026-10-17T03:28:46.051Z"
   },
   {
     "kind": "popular",
@@ -921,8 +917,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1466,
-    "timestamp": "2026-10-16T17:43:59.939Z"
+    "durationMs": 1348,
+    "timestamp": "2026-10-17T03:28:47.749Z"
   },
   {
     "kind": "popular",
@@ -934,8 +930,8 @@
     "findings": [
       "New publisher \"phated\" has never released this package before"
     ],
-    "durationMs": 1411,
-    "timestamp": "2026-10-16T17:44:01.706Z"
+    "durationMs": 1345,
+    "timestamp": "2026-10-17T03:28:49.412Z"
   },
   {
     "kind": "popular",
@@ -945,8 +941,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1340,
-    "timestamp": "2026-10-16T17:44:03.423Z"
+    "durationMs": 1433,
+    "timestamp": "2026-10-17T03:28:51.061Z"
   },
   {
     "kind": "popular",
@@ -956,8 +952,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1445,
-    "timestamp": "2026-10-16T17:44:05.063Z"
+    "durationMs": 1593,
+    "timestamp": "2026-10-17T03:28:52.804Z"
   },
   {
     "kind": "popular",
@@ -967,8 +963,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 950,
-    "timestamp": "2026-10-16T17:44:06.811Z"
+    "durationMs": 593,
+    "timestamp": "2026-10-17T03:28:54.707Z"
   },
   {
     "kind": "popular",
@@ -978,8 +974,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 445,
-    "timestamp": "2026-10-16T17:44:08.062Z"
+    "durationMs": 1414,
+    "timestamp": "2026-10-17T03:28:55.615Z"
   },
   {
     "kind": "popular",
@@ -989,8 +985,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1375,
-    "timestamp": "2026-10-16T17:44:08.820Z"
+    "durationMs": 1353,
+    "timestamp": "2026-10-17T03:28:57.345Z"
   },
   {
     "kind": "popular",
@@ -1000,8 +996,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1394,
-    "timestamp": "2026-10-16T17:44:10.503Z"
+    "durationMs": 1487,
+    "timestamp": "2026-10-17T03:28:59.009Z"
   },
   {
     "kind": "popular",
@@ -1011,8 +1007,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 436,
-    "timestamp": "2026-10-16T17:44:12.202Z"
+    "durationMs": 690,
+    "timestamp": "2026-10-17T03:29:00.800Z"
   },
   {
     "kind": "popular",
@@ -1022,8 +1018,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1337,
-    "timestamp": "2026-10-16T17:44:12.943Z"
+    "durationMs": 1413,
+    "timestamp": "2026-10-17T03:29:01.792Z"
   },
   {
     "kind": "popular",
@@ -1033,8 +1029,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 646,
-    "timestamp": "2026-10-16T17:44:14.583Z"
+    "durationMs": 719,
+    "timestamp": "2026-10-17T03:29:03.520Z"
   },
   {
     "kind": "popular",
@@ -1044,8 +1040,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1338,
-    "timestamp": "2026-10-16T17:44:15.534Z"
+    "durationMs": 1406,
+    "timestamp": "2026-10-17T03:29:04.540Z"
   },
   {
     "kind": "popular",
@@ -1055,8 +1051,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1712,
-    "timestamp": "2026-10-16T17:44:17.176Z"
+    "durationMs": 1332,
+    "timestamp": "2026-10-17T03:29:06.254Z"
   },
   {
     "kind": "popular",
@@ -1066,8 +1062,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1481,
-    "timestamp": "2026-10-16T17:44:19.191Z"
+    "durationMs": 1385,
+    "timestamp": "2026-10-17T03:29:07.888Z"
   },
   {
     "kind": "popular",
@@ -1077,8 +1073,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1717,
-    "timestamp": "2026-10-16T17:44:20.973Z"
+    "durationMs": 1445,
+    "timestamp": "2026-10-17T03:29:09.585Z"
   },
   {
     "kind": "popular",
@@ -1088,8 +1084,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 65982,
-    "timestamp": "2026-10-16T17:44:22.994Z"
+    "durationMs": 66035,
+    "timestamp": "2026-10-17T03:29:11.341Z"
   },
   {
     "kind": "popular",
@@ -1099,8 +1095,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1387,
-    "timestamp": "2026-10-16T17:45:29.278Z"
+    "durationMs": 593,
+    "timestamp": "2026-10-17T03:30:17.678Z"
   },
   {
     "kind": "popular",
@@ -1110,8 +1106,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1600,
-    "timestamp": "2026-10-16T17:45:30.977Z"
+    "durationMs": 1336,
+    "timestamp": "2026-10-17T03:30:18.572Z"
   },
   {
     "kind": "popular",
@@ -1121,8 +1117,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1522,
-    "timestamp": "2026-10-16T17:45:32.885Z"
+    "durationMs": 1372,
+    "timestamp": "2026-10-17T03:30:20.221Z"
   },
   {
     "kind": "popular",
@@ -1134,8 +1130,8 @@
     "findings": [
       "4 versions published within 6 h"
     ],
-    "durationMs": 1384,
-    "timestamp": "2026-10-16T17:45:34.709Z"
+    "durationMs": 1357,
+    "timestamp": "2026-10-17T03:30:21.901Z"
   },
   {
     "kind": "popular",
@@ -1145,8 +1141,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1363,
-    "timestamp": "2026-10-16T17:45:36.400Z"
+    "durationMs": 1393,
+    "timestamp": "2026-10-17T03:30:23.566Z"
   },
   {
     "kind": "popular",
@@ -1156,8 +1152,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 713,
-    "timestamp": "2026-10-16T17:45:38.066Z"
+    "durationMs": 1630,
+    "timestamp": "2026-10-17T03:30:25.265Z"
   },
   {
     "kind": "popular",
@@ -1169,8 +1165,8 @@
     "findings": [
       "New publisher \"ulisesgascon\" has never released this package before"
     ],
-    "durationMs": 1374,
-    "timestamp": "2026-10-16T17:45:39.089Z"
+    "durationMs": 1353,
+    "timestamp": "2026-10-17T03:30:27.203Z"
   },
   {
     "kind": "popular",
@@ -1180,8 +1176,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1423,
-    "timestamp": "2026-10-16T17:45:40.764Z"
+    "durationMs": 475,
+    "timestamp": "2026-10-17T03:30:28.869Z"
   },
   {
     "kind": "popular",
@@ -1191,10 +1187,10 @@
     "verdict": "ALLOW",
     "score": 15,
     "findings": [
-      "Published 11.7 h ago"
+      "Published 21.4 h ago"
     ],
-    "durationMs": 1826,
-    "timestamp": "2026-10-16T17:45:42.497Z"
+    "durationMs": 702,
+    "timestamp": "2026-10-17T03:30:29.653Z"
   },
   {
     "kind": "popular",
@@ -1206,8 +1202,8 @@
     "findings": [
       "Suspicious obfuscation in release code"
     ],
-    "durationMs": 3497,
-    "timestamp": "2026-10-16T17:45:44.623Z"
+    "durationMs": 2082,
+    "timestamp": "2026-10-17T03:30:30.660Z"
   },
   {
     "kind": "popular",
@@ -1217,8 +1213,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1360,
-    "timestamp": "2026-10-16T17:45:48.436Z"
+    "durationMs": 1424,
+    "timestamp": "2026-10-17T03:30:33.042Z"
   },
   {
     "kind": "popular",
@@ -1228,8 +1224,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1707,
-    "timestamp": "2026-10-16T17:45:50.103Z"
+    "durationMs": 1613,
+    "timestamp": "2026-10-17T03:30:34.781Z"
   },
   {
     "kind": "popular",
@@ -1239,8 +1235,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 457,
-    "timestamp": "2026-10-16T17:45:52.116Z"
+    "durationMs": 693,
+    "timestamp": "2026-10-17T03:30:36.696Z"
   },
   {
     "kind": "popular",
@@ -1250,8 +1246,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1525,
-    "timestamp": "2026-10-16T17:45:52.876Z"
+    "durationMs": 1424,
+    "timestamp": "2026-10-17T03:30:37.698Z"
   },
   {
     "kind": "popular",
@@ -1261,8 +1257,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 468,
-    "timestamp": "2026-10-16T17:45:54.717Z"
+    "durationMs": 718,
+    "timestamp": "2026-10-17T03:30:39.435Z"
   },
   {
     "kind": "popular",
@@ -1272,8 +1268,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 447,
-    "timestamp": "2026-10-16T17:45:55.485Z"
+    "durationMs": 1420,
+    "timestamp": "2026-10-17T03:30:40.468Z"
   },
   {
     "kind": "popular",
@@ -1283,8 +1279,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 544,
-    "timestamp": "2026-10-16T17:45:56.234Z"
+    "durationMs": 1401,
+    "timestamp": "2026-10-17T03:30:42.199Z"
   },
   {
     "kind": "popular",
@@ -1294,8 +1290,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1078,
-    "timestamp": "2026-10-16T17:45:57.086Z"
+    "durationMs": 676,
+    "timestamp": "2026-10-17T03:30:43.910Z"
   },
   {
     "kind": "popular",
@@ -1305,8 +1301,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1385,
-    "timestamp": "2026-10-16T17:45:58.465Z"
+    "durationMs": 1344,
+    "timestamp": "2026-10-17T03:30:44.899Z"
   },
   {
     "kind": "popular",
@@ -1316,8 +1312,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1557,
-    "timestamp": "2026-10-16T17:46:00.150Z"
+    "durationMs": 457,
+    "timestamp": "2026-10-17T03:30:46.550Z"
   },
   {
     "kind": "popular",
@@ -1327,8 +1323,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1458,
-    "timestamp": "2026-10-16T17:46:02.014Z"
+    "durationMs": 1353,
+    "timestamp": "2026-10-17T03:30:47.322Z"
   },
   {
     "kind": "popular",
@@ -1338,8 +1334,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1449,
-    "timestamp": "2026-10-16T17:46:03.772Z"
+    "durationMs": 1439,
+    "timestamp": "2026-10-17T03:30:48.986Z"
   },
   {
     "kind": "popular",
@@ -1349,8 +1345,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1382,
-    "timestamp": "2026-10-16T17:46:05.524Z"
+    "durationMs": 1316,
+    "timestamp": "2026-10-17T03:30:50.726Z"
   },
   {
     "kind": "popular",
@@ -1358,12 +1354,10 @@
     "package": "baseline-browser-mapping",
     "version": "2.11.29",
     "verdict": "ALLOW",
-    "score": 15,
-    "findings": [
-      "Published 23.6 h ago"
-    ],
-    "durationMs": 1491,
-    "timestamp": "2026-10-16T17:46:07.212Z"
+    "score": 0,
+    "findings": [],
+    "durationMs": 742,
+    "timestamp": "2026-10-17T03:30:52.357Z"
   },
   {
     "kind": "popular",
@@ -1373,8 +1367,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1450,
-    "timestamp": "2026-10-16T17:46:09.011Z"
+    "durationMs": 1337,
+    "timestamp": "2026-10-17T03:30:53.413Z"
   },
   {
     "kind": "popular",
@@ -1386,8 +1380,8 @@
     "findings": [
       "New publisher \"ulisesgascon\" has never released this package before"
     ],
-    "durationMs": 1409,
-    "timestamp": "2026-10-16T17:46:10.760Z"
+    "durationMs": 1349,
+    "timestamp": "2026-10-17T03:30:55.064Z"
   },
   {
     "kind": "popular",
@@ -1397,8 +1391,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1479,
-    "timestamp": "2026-10-16T17:46:12.484Z"
+    "durationMs": 676,
+    "timestamp": "2026-10-17T03:30:56.728Z"
   },
   {
     "kind": "popular",
@@ -1408,8 +1402,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 3592,
-    "timestamp": "2026-10-16T17:46:14.268Z"
+    "durationMs": 2698,
+    "timestamp": "2026-10-17T03:30:57.705Z"
   },
   {
     "kind": "popular",
@@ -1419,8 +1413,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1403,
-    "timestamp": "2026-10-16T17:46:18.165Z"
+    "durationMs": 1385,
+    "timestamp": "2026-10-17T03:31:00.713Z"
   },
   {
     "kind": "popular",
@@ -1430,8 +1424,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 66599,
-    "timestamp": "2026-10-16T17:46:19.882Z"
+    "durationMs": 66791,
+    "timestamp": "2026-10-17T03:31:02.405Z"
   },
   {
     "kind": "popular",
@@ -1441,8 +1435,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1538,
-    "timestamp": "2026-10-16T17:47:26.788Z"
+    "durationMs": 1355,
+    "timestamp": "2026-10-17T03:32:09.497Z"
   },
   {
     "kind": "popular",
@@ -1454,8 +1448,8 @@
     "findings": [
       "Suspicious obfuscation in release code"
     ],
-    "durationMs": 726,
-    "timestamp": "2026-10-16T17:47:28.629Z"
+    "durationMs": 1367,
+    "timestamp": "2026-10-17T03:32:11.164Z"
   },
   {
     "kind": "popular",
@@ -1465,8 +1459,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1358,
-    "timestamp": "2026-10-16T17:47:29.667Z"
+    "durationMs": 1575,
+    "timestamp": "2026-10-17T03:32:12.843Z"
   },
   {
     "kind": "popular",
@@ -1476,8 +1470,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1550,
-    "timestamp": "2026-10-16T17:47:31.326Z"
+    "durationMs": 1347,
+    "timestamp": "2026-10-17T03:32:14.732Z"
   },
   {
     "kind": "popular",
@@ -1487,8 +1481,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1625,
-    "timestamp": "2026-10-16T17:47:33.175Z"
+    "durationMs": 1370,
+    "timestamp": "2026-10-17T03:32:16.379Z"
   },
   {
     "kind": "popular",
@@ -1498,8 +1492,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1400,
-    "timestamp": "2026-10-16T17:47:35.100Z"
+    "durationMs": 569,
+    "timestamp": "2026-10-17T03:32:18.054Z"
   },
   {
     "kind": "popular",
@@ -1509,8 +1503,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1355,
-    "timestamp": "2026-10-16T17:47:36.807Z"
+    "durationMs": 1363,
+    "timestamp": "2026-10-17T03:32:18.931Z"
   },
   {
     "kind": "popular",
@@ -1520,8 +1514,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1444,
-    "timestamp": "2026-10-16T17:47:38.465Z"
+    "durationMs": 1375,
+    "timestamp": "2026-10-17T03:32:20.605Z"
   },
   {
     "kind": "popular",
@@ -1531,8 +1525,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 668,
-    "timestamp": "2026-10-16T17:47:40.214Z"
+    "durationMs": 1413,
+    "timestamp": "2026-10-17T03:32:22.281Z"
   },
   {
     "kind": "popular",
@@ -1542,8 +1536,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 496,
-    "timestamp": "2026-10-16T17:47:41.197Z"
+    "durationMs": 1417,
+    "timestamp": "2026-10-17T03:32:24.004Z"
   },
   {
     "kind": "popular",
@@ -1553,8 +1547,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1392,
-    "timestamp": "2026-10-16T17:47:41.997Z"
+    "durationMs": 1369,
+    "timestamp": "2026-10-17T03:32:25.731Z"
   },
   {
     "kind": "popular",
@@ -1566,8 +1560,8 @@
     "findings": [
       "New publisher \"doowb\" has never released this package before"
     ],
-    "durationMs": 1345,
-    "timestamp": "2026-10-16T17:47:43.689Z"
+    "durationMs": 1370,
+    "timestamp": "2026-10-17T03:32:27.406Z"
   },
   {
     "kind": "popular",
@@ -1579,8 +1573,8 @@
     "findings": [
       "New publisher \"zkat\" has never released this package before"
     ],
-    "durationMs": 1414,
-    "timestamp": "2026-10-16T17:47:45.337Z"
+    "durationMs": 471,
+    "timestamp": "2026-10-17T03:32:29.086Z"
   },
   {
     "kind": "popular",
@@ -1590,8 +1584,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 455,
-    "timestamp": "2026-10-16T17:47:47.055Z"
+    "durationMs": 458,
+    "timestamp": "2026-10-17T03:32:29.870Z"
   },
   {
     "kind": "popular",
@@ -1601,8 +1595,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 449,
-    "timestamp": "2026-10-16T17:47:47.819Z"
+    "durationMs": 1323,
+    "timestamp": "2026-10-17T03:32:30.635Z"
   },
   {
     "kind": "popular",
@@ -1612,8 +1606,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1413,
-    "timestamp": "2026-10-16T17:47:48.570Z"
+    "durationMs": 1356,
+    "timestamp": "2026-10-17T03:32:32.267Z"
   },
   {
     "kind": "popular",
@@ -1623,8 +1617,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1332,
-    "timestamp": "2026-10-16T17:47:50.293Z"
+    "durationMs": 1366,
+    "timestamp": "2026-10-17T03:32:33.931Z"
   },
   {
     "kind": "popular",
@@ -1634,8 +1628,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1337,
-    "timestamp": "2026-10-16T17:47:51.934Z"
+    "durationMs": 1338,
+    "timestamp": "2026-10-17T03:32:35.609Z"
   },
   {
     "kind": "popular",
@@ -1645,8 +1639,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1382,
-    "timestamp": "2026-10-16T17:47:53.577Z"
+    "durationMs": 1338,
+    "timestamp": "2026-10-17T03:32:37.258Z"
   },
   {
     "kind": "popular",
@@ -1658,8 +1652,8 @@
     "findings": [
       "New publisher \"ulisesgascon\" has never released this package before"
     ],
-    "durationMs": 1473,
-    "timestamp": "2026-10-16T17:47:55.267Z"
+    "durationMs": 1410,
+    "timestamp": "2026-10-17T03:32:38.909Z"
   },
   {
     "kind": "popular",
@@ -1669,8 +1663,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1375,
-    "timestamp": "2026-10-16T17:47:57.047Z"
+    "durationMs": 1322,
+    "timestamp": "2026-10-17T03:32:40.624Z"
   },
   {
     "kind": "popular",
@@ -1682,8 +1676,8 @@
     "findings": [
       "New publisher \"blakeembrey\" has never released this package before"
     ],
-    "durationMs": 1354,
-    "timestamp": "2026-10-16T17:47:58.723Z"
+    "durationMs": 1402,
+    "timestamp": "2026-10-17T03:32:42.253Z"
   },
   {
     "kind": "popular",
@@ -1693,8 +1687,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 2375,
-    "timestamp": "2026-10-16T17:48:00.381Z"
+    "durationMs": 2404,
+    "timestamp": "2026-10-17T03:32:43.961Z"
   },
   {
     "kind": "popular",
@@ -1704,10 +1698,10 @@
     "verdict": "ALLOW",
     "score": 15,
     "findings": [
-      "Published 3.4 h ago"
+      "Published 13.1 h ago"
     ],
-    "durationMs": 1119,
-    "timestamp": "2026-10-16T17:48:03.071Z"
+    "durationMs": 613,
+    "timestamp": "2026-10-17T03:32:46.679Z"
   },
   {
     "kind": "popular",
@@ -1717,8 +1711,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1402,
-    "timestamp": "2026-10-16T17:48:04.496Z"
+    "durationMs": 456,
+    "timestamp": "2026-10-17T03:32:47.602Z"
   },
   {
     "kind": "popular",
@@ -1728,8 +1722,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1437,
-    "timestamp": "2026-10-16T17:48:06.203Z"
+    "durationMs": 1358,
+    "timestamp": "2026-10-17T03:32:48.373Z"
   },
   {
     "kind": "popular",
@@ -1739,8 +1733,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1486,
-    "timestamp": "2026-10-16T17:48:07.944Z"
+    "durationMs": 1363,
+    "timestamp": "2026-10-17T03:32:50.037Z"
   },
   {
     "kind": "popular",
@@ -1750,8 +1744,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1482,
-    "timestamp": "2026-10-16T17:48:09.732Z"
+    "durationMs": 470,
+    "timestamp": "2026-10-17T03:32:51.701Z"
   },
   {
     "kind": "popular",
@@ -1761,8 +1755,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1562,
-    "timestamp": "2026-10-16T17:48:11.520Z"
+    "durationMs": 1351,
+    "timestamp": "2026-10-17T03:32:52.485Z"
   },
   {
     "kind": "popular",
@@ -1772,8 +1766,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 65650,
-    "timestamp": "2026-10-16T17:48:13.394Z"
+    "durationMs": 66788,
+    "timestamp": "2026-10-17T03:32:54.147Z"
   },
   {
     "kind": "popular",
@@ -1783,8 +1777,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1412,
-    "timestamp": "2026-10-16T17:49:19.348Z"
+    "durationMs": 1463,
+    "timestamp": "2026-10-17T03:34:01.235Z"
   },
   {
     "kind": "popular",
@@ -1794,8 +1788,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1546,
-    "timestamp": "2026-10-16T17:49:21.071Z"
+    "durationMs": 1562,
+    "timestamp": "2026-10-17T03:34:03.010Z"
   },
   {
     "kind": "popular",
@@ -1805,8 +1799,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 660,
-    "timestamp": "2026-10-16T17:49:22.930Z"
+    "durationMs": 1712,
+    "timestamp": "2026-10-17T03:34:04.877Z"
   },
   {
     "kind": "popular",
@@ -1816,8 +1810,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1429,
-    "timestamp": "2026-10-16T17:49:23.896Z"
+    "durationMs": 1414,
+    "timestamp": "2026-10-17T03:34:06.903Z"
   },
   {
     "kind": "popular",
@@ -1827,8 +1821,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1407,
-    "timestamp": "2026-10-16T17:49:25.630Z"
+    "durationMs": 621,
+    "timestamp": "2026-10-17T03:34:08.617Z"
   },
   {
     "kind": "popular",
@@ -1838,8 +1832,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1372,
-    "timestamp": "2026-10-16T17:49:27.345Z"
+    "durationMs": 1356,
+    "timestamp": "2026-10-17T03:34:09.546Z"
   },
   {
     "kind": "popular",
@@ -1849,8 +1843,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1325,
-    "timestamp": "2026-10-16T17:49:29.018Z"
+    "durationMs": 1378,
+    "timestamp": "2026-10-17T03:34:11.208Z"
   },
   {
     "kind": "popular",
@@ -1860,8 +1854,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 471,
-    "timestamp": "2026-10-16T17:49:30.643Z"
+    "durationMs": 1432,
+    "timestamp": "2026-10-17T03:34:12.889Z"
   },
   {
     "kind": "popular",
@@ -1871,8 +1865,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1389,
-    "timestamp": "2026-10-16T17:49:31.424Z"
+    "durationMs": 1335,
+    "timestamp": "2026-10-17T03:34:14.629Z"
   },
   {
     "kind": "popular",
@@ -1884,8 +1878,8 @@
     "findings": [
       "New publisher \"ljharb\" has never released this package before"
     ],
-    "durationMs": 1364,
-    "timestamp": "2026-10-16T17:49:33.119Z"
+    "durationMs": 1390,
+    "timestamp": "2026-10-17T03:34:16.278Z"
   },
   {
     "kind": "popular",
@@ -1895,8 +1889,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1410,
-    "timestamp": "2026-10-16T17:49:34.791Z"
+    "durationMs": 1481,
+    "timestamp": "2026-10-17T03:34:17.983Z"
   },
   {
     "kind": "popular",
@@ -1906,8 +1900,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1396,
-    "timestamp": "2026-10-16T17:49:36.506Z"
+    "durationMs": 1373,
+    "timestamp": "2026-10-17T03:34:19.767Z"
   },
   {
     "kind": "popular",
@@ -1917,8 +1911,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1398,
-    "timestamp": "2026-10-16T17:49:38.209Z"
+    "durationMs": 509,
+    "timestamp": "2026-10-17T03:34:21.455Z"
   },
   {
     "kind": "popular",
@@ -1928,8 +1922,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1412,
-    "timestamp": "2026-10-16T17:49:39.921Z"
+    "durationMs": 483,
+    "timestamp": "2026-10-17T03:34:22.271Z"
   },
   {
     "kind": "popular",
@@ -1939,8 +1933,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 417,
-    "timestamp": "2026-10-16T17:49:41.637Z"
+    "durationMs": 1389,
+    "timestamp": "2026-10-17T03:34:23.055Z"
   },
   {
     "kind": "popular",
@@ -1950,8 +1944,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1391,
-    "timestamp": "2026-10-16T17:49:42.355Z"
+    "durationMs": 1383,
+    "timestamp": "2026-10-17T03:34:24.746Z"
   },
   {
     "kind": "popular",
@@ -1961,8 +1955,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1391,
-    "timestamp": "2026-10-16T17:49:44.053Z"
+    "durationMs": 1382,
+    "timestamp": "2026-10-17T03:34:26.437Z"
   },
   {
     "kind": "popular",
@@ -1972,8 +1966,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1396,
-    "timestamp": "2026-10-16T17:49:45.745Z"
+    "durationMs": 1390,
+    "timestamp": "2026-10-17T03:34:28.128Z"
   },
   {
     "kind": "popular",
@@ -1983,8 +1977,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1370,
-    "timestamp": "2026-10-16T17:49:47.451Z"
+    "durationMs": 1425,
+    "timestamp": "2026-10-17T03:34:29.824Z"
   },
   {
     "kind": "popular",
@@ -1994,8 +1988,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1352,
-    "timestamp": "2026-10-16T17:49:49.128Z"
+    "durationMs": 1393,
+    "timestamp": "2026-10-17T03:34:31.550Z"
   },
   {
     "kind": "popular",
@@ -2005,8 +1999,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 451,
-    "timestamp": "2026-10-16T17:49:50.793Z"
+    "durationMs": 1434,
+    "timestamp": "2026-10-17T03:34:33.246Z"
   },
   {
     "kind": "popular",
@@ -2018,8 +2012,8 @@
     "findings": [
       "Suspicious obfuscation in release code"
     ],
-    "durationMs": 468,
-    "timestamp": "2026-10-16T17:49:51.549Z"
+    "durationMs": 1584,
+    "timestamp": "2026-10-17T03:34:34.986Z"
   },
   {
     "kind": "popular",
@@ -2029,8 +2023,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 438,
-    "timestamp": "2026-10-16T17:49:52.319Z"
+    "durationMs": 1384,
+    "timestamp": "2026-10-17T03:34:36.875Z"
   },
   {
     "kind": "popular",
@@ -2040,8 +2034,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1477,
-    "timestamp": "2026-10-16T17:49:53.060Z"
+    "durationMs": 490,
+    "timestamp": "2026-10-17T03:34:38.566Z"
   },
   {
     "kind": "popular",
@@ -2051,8 +2045,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1368,
-    "timestamp": "2026-10-16T17:49:54.839Z"
+    "durationMs": 1354,
+    "timestamp": "2026-10-17T03:34:39.364Z"
   },
   {
     "kind": "popular",
@@ -2062,8 +2056,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1349,
-    "timestamp": "2026-10-16T17:49:56.514Z"
+    "durationMs": 1320,
+    "timestamp": "2026-10-17T03:34:41.030Z"
   },
   {
     "kind": "popular",
@@ -2073,8 +2067,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1361,
-    "timestamp": "2026-10-16T17:49:58.165Z"
+    "durationMs": 1403,
+    "timestamp": "2026-10-17T03:34:42.663Z"
   },
   {
     "kind": "popular",
@@ -2084,8 +2078,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1387,
-    "timestamp": "2026-10-16T17:49:59.830Z"
+    "durationMs": 1424,
+    "timestamp": "2026-10-17T03:34:44.377Z"
   },
   {
     "kind": "popular",
@@ -2095,8 +2089,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1584,
-    "timestamp": "2026-10-16T17:50:01.530Z"
+    "durationMs": 1348,
+    "timestamp": "2026-10-17T03:34:46.104Z"
   },
   {
     "kind": "popular",
@@ -2106,8 +2100,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 66916,
-    "timestamp": "2026-10-16T17:50:03.420Z"
+    "durationMs": 66668,
+    "timestamp": "2026-10-17T03:34:47.754Z"
   },
   {
     "kind": "popular",
@@ -2117,8 +2111,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1603,
-    "timestamp": "2026-10-16T17:51:10.641Z"
+    "durationMs": 519,
+    "timestamp": "2026-10-17T03:35:54.722Z"
   },
   {
     "kind": "popular",
@@ -2128,8 +2122,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1423,
-    "timestamp": "2026-10-16T17:51:12.557Z"
+    "durationMs": 1340,
+    "timestamp": "2026-10-17T03:35:55.556Z"
   },
   {
     "kind": "popular",
@@ -2139,8 +2133,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1515,
-    "timestamp": "2026-10-16T17:51:14.282Z"
+    "durationMs": 1381,
+    "timestamp": "2026-10-17T03:35:57.205Z"
   },
   {
     "kind": "popular",
@@ -2150,8 +2144,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1394,
-    "timestamp": "2026-10-16T17:51:16.098Z"
+    "durationMs": 1437,
+    "timestamp": "2026-10-17T03:35:58.900Z"
   },
   {
     "kind": "popular",
@@ -2163,8 +2157,8 @@
     "findings": [
       "New publisher \"blakeembrey\" has never released this package before"
     ],
-    "durationMs": 1352,
-    "timestamp": "2026-10-16T17:51:17.796Z"
+    "durationMs": 1326,
+    "timestamp": "2026-10-17T03:36:00.642Z"
   },
   {
     "kind": "popular",
@@ -2174,8 +2168,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1392,
-    "timestamp": "2026-10-16T17:51:19.455Z"
+    "durationMs": 1348,
+    "timestamp": "2026-10-17T03:36:02.275Z"
   },
   {
     "kind": "popular",
@@ -2187,8 +2181,8 @@
     "findings": [
       "Suspicious obfuscation in release code"
     ],
-    "durationMs": 746,
-    "timestamp": "2026-10-16T17:51:21.155Z"
+    "durationMs": 756,
+    "timestamp": "2026-10-17T03:36:03.938Z"
   },
   {
     "kind": "popular",
@@ -2198,8 +2192,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1509,
-    "timestamp": "2026-10-16T17:51:22.211Z"
+    "durationMs": 1363,
+    "timestamp": "2026-10-17T03:36:05.009Z"
   },
   {
     "kind": "popular",
@@ -2209,8 +2203,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1346,
-    "timestamp": "2026-10-16T17:51:24.028Z"
+    "durationMs": 1337,
+    "timestamp": "2026-10-17T03:36:06.675Z"
   },
   {
     "kind": "popular",
@@ -2220,8 +2214,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1567,
-    "timestamp": "2026-10-16T17:51:25.677Z"
+    "durationMs": 482,
+    "timestamp": "2026-10-17T03:36:08.325Z"
   },
   {
     "kind": "popular",
@@ -2231,8 +2225,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1374,
-    "timestamp": "2026-10-16T17:51:27.551Z"
+    "durationMs": 1385,
+    "timestamp": "2026-10-17T03:36:09.108Z"
   },
   {
     "kind": "popular",
@@ -2242,8 +2236,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1400,
-    "timestamp": "2026-10-16T17:51:29.226Z"
+    "durationMs": 1353,
+    "timestamp": "2026-10-17T03:36:10.803Z"
   },
   {
     "kind": "popular",
@@ -2253,8 +2247,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1378,
-    "timestamp": "2026-10-16T17:51:30.926Z"
+    "durationMs": 1479,
+    "timestamp": "2026-10-17T03:36:12.464Z"
   },
   {
     "kind": "popular",
@@ -2264,8 +2258,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1548,
-    "timestamp": "2026-10-16T17:51:32.608Z"
+    "durationMs": 1341,
+    "timestamp": "2026-10-17T03:36:14.255Z"
   },
   {
     "kind": "popular",
@@ -2275,8 +2269,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1543,
-    "timestamp": "2026-10-16T17:51:34.465Z"
+    "durationMs": 1356,
+    "timestamp": "2026-10-17T03:36:15.902Z"
   },
   {
     "kind": "popular",
@@ -2286,8 +2280,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1341,
-    "timestamp": "2026-10-16T17:51:36.315Z"
+    "durationMs": 1323,
+    "timestamp": "2026-10-17T03:36:17.565Z"
   },
   {
     "kind": "popular",
@@ -2297,8 +2291,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 868,
-    "timestamp": "2026-10-16T17:51:37.956Z"
+    "durationMs": 1355,
+    "timestamp": "2026-10-17T03:36:19.200Z"
   },
   {
     "kind": "popular",
@@ -2308,8 +2302,8 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 427,
-    "timestamp": "2026-10-16T17:51:39.130Z"
+    "durationMs": 1479,
+    "timestamp": "2026-10-17T03:36:20.864Z"
   },
   {
     "kind": "popular",
@@ -2319,7 +2313,7 @@
     "verdict": "ALLOW",
     "score": 0,
     "findings": [],
-    "durationMs": 1565,
-    "timestamp": "2026-10-16T17:51:39.863Z"
+    "durationMs": 1359,
+    "timestamp": "2026-10-17T03:36:22.657Z"
   }
 ]

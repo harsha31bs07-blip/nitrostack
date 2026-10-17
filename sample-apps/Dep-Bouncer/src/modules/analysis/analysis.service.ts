@@ -64,7 +64,7 @@ export class AnalysisService {
       return await Promise.race([signal.evaluate(evaluationContext), timeout]);
     } catch (err) {
       const reason = err instanceof Error ? err.message : String(err);
-      return [finding(signal.id, 'warn', `${signal.id} check incomplete: ${reason}`)];
+      return [{ ...finding(signal.id, 'warn', `${signal.id} check incomplete: ${reason}`), incomplete: true }];
     } finally {
       clearTimeout(timer);
     }

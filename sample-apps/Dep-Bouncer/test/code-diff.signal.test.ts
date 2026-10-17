@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { CodeDiffSignal } from '../src/modules/analysis/signals/code-diff.signal.js';
 import { SEVERITY_WEIGHT, type AnalysisContext, type FileMap, type VersionManifest } from '../src/modules/analysis/signal.js';
+import { decide } from '../src/modules/analysis/verdict.js';
 
 const manifest = (version: string, scripts?: Record<string, string>): VersionManifest => ({
   name: 'fixture', version, scripts, dist: { tarball: 'https://fixture.invalid/package.tgz' },
@@ -102,7 +103,8 @@ test('target and baseline load failures return an incomplete comparison warning'
     const ctx = context(new Map());
     ctx.loadFiles = async requested => { if (requested === version) throw new Error('fixture unavailable'); return new Map(); };
     assert.deepEqual(await signal.evaluate(ctx), [{ signal: 'code-diff', severity: 'warn',
-      title: 'Code comparison incomplete: fixture unavailable', evidence: [], weight: 15 }]);
+      title: 'Code comparison incomplete: fixture unavailable', evidence: [], weight: 15, incomplete: true }]);
+    assert.equal(decide(await signal.evaluate(ctx)).verdict, 'REVIEW');
   }
 });
 
@@ -147,7 +149,7 @@ test('large files report incomplete coverage and scan only their head and tail',
   assert.ok(!result.some(finding => finding.severity === 'high' || finding.severity === 'critical'));
   assert.ok(result.some(finding => finding.evidence.some(item => item.includes('large-minified-file'))));
   // Partial scans of big bundles are noted without risk weight (typescript.js is ~9 MB).
-  assert.ok(result.some(finding => finding.title === 'Code scanned partially: huge.js' && finding.weight === 0));
+  assert.ok(result.some(finding => finding.title === 'Code scanned partially: huge.js' && finding.weight === 0 && finding.incomplete));
   assert.ok(result.some(finding => finding.evidence.some(item => item.includes('eval(head)'))));
   assert.ok(result.some(finding => finding.evidence.some(item => item.includes('eval(tail)'))));
   assert.ok(!result.some(finding => finding.title.includes('credentials')));
@@ -225,7 +227,8 @@ test('release scan budget covers baseline and target and reports skipped files o
   const baseline = new Map(Array.from({ length: 10 }, (_, i) => [`old${i}.js`, chunk]));
   const result = await signal.evaluate(context(target, baseline));
   assert.deepEqual(result, [{ signal: 'code-diff', severity: 'warn', weight: 15,
-    title: 'Code comparison incomplete: code scan budget exceeded, 1 files not scanned', evidence: [] }]);
+    title: 'Code comparison incomplete: code scan budget exceeded, 1 files not scanned', evidence: [], incomplete: true }]);
+  assert.equal(decide(result).verdict, 'REVIEW');
 });
 
 test('oversized files in the target or baseline are noted as partial scans without weight', async () => {
@@ -236,8 +239,22 @@ test('oversized files in the target or baseline are noted as partial scans witho
   assert.equal(result.length, 1);
   assert.equal(result[0].severity, 'info');
   assert.equal(result[0].weight, 0);
+  assert.equal(result[0].incomplete, true);
+  assert.equal(decide(result).verdict, 'REVIEW');
   const baselineResult = await signal.evaluate(context(files({ 'index.js': 'export {};' }), files({ 'old.js': huge })));
-  assert.ok(baselineResult.some(f => f.title === 'Code scanned partially: old.js' && f.weight === 0));
+  assert.ok(baselineResult.some(f => f.title === 'Code scanned partially: old.js' && f.weight === 0 && f.incomplete));
+});
+
+test('code scan cancellation and deadlines carry structured incomplete findings', async () => {
+  for (const mode of ['abort', 'deadline']) {
+    const controller = new AbortController();
+    if (mode === 'abort') controller.abort();
+    const ctx = { ...context(files({ 'index.js': 'export {};' })),
+      signal: controller.signal, deadline: mode === 'deadline' ? Date.now() - 1 : undefined };
+    const result = await signal.evaluate(ctx);
+    assert.ok(result.some(f => f.incomplete && f.weight === 15 && f.title.includes('deadline exceeded or cancelled')));
+    assert.equal(decide(result).verdict, 'REVIEW');
+  }
 });
 
 test('a credential path next to process execution in a new file is high', async () => {

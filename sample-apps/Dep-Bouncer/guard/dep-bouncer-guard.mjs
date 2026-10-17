@@ -1,11 +1,13 @@
 #!/usr/bin/env node
-import { findInstalls, decide } from './parse-command.mjs';
+import { parseCommand, decide } from './parse-command.mjs';
 
 const endpoint = process.env.DEP_BOUNCER_URL || 'https://dep-bouncer-6ad22414-giberelin-heapify-global-community.app.nitrocloud.ai/mcp';
 const cursor = process.argv.includes('--cursor');
 const failClosed = process.env.DEP_BOUNCER_FAIL_CLOSED === '1';
+const apiKey = process.env.DEP_BOUNCER_API_KEY;
 
 function output(decision, reason) {
+  if (!['deny', 'ask'].includes(decision)) return;
   const result = cursor
     ? { permission: decision, userMessage: reason, agentMessage: reason }
     : { hookSpecificOutput: { hookEventName: 'PreToolUse', permissionDecision: decision, permissionDecisionReason: reason } };
@@ -14,7 +16,7 @@ function output(decision, reason) {
 
 function unavailable(reason, command) {
   const message = `Dep Bouncer unavailable: ${reason}`;
-  if (!failClosed) process.stderr.write(`${message}; allowing ${command}\n`);
+  process.stderr.write(`${message}${failClosed ? '' : `; leaving host permissions unchanged for ${command}`}\n`);
   return message;
 }
 
@@ -36,13 +38,15 @@ async function checkPackage(request, id) {
       'content-type': 'application/json',
       accept: 'application/json, text/event-stream',
       'mcp-protocol-version': '2025-06-18',
+      ...(apiKey ? { 'x-api-key': apiKey } : {}),
     },
     body: JSON.stringify({ jsonrpc: '2.0', id, method: 'tools/call', params: {
       name: 'bouncer_check_package', arguments: { name: request.name, ...(request.spec ? { version: request.spec } : {}) },
+      ...(apiKey ? { _meta: { apiKey } } : {}),
     } }),
     signal: AbortSignal.timeout(25_000),
   }));
-  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  if (!response.ok) throw new Error(`HTTP ${response.status}${[401, 403].includes(response.status) ? ': check DEP_BOUNCER_API_KEY' : ''}`);
   const body = await response.text();
   let rpc;
   try {
@@ -59,9 +63,9 @@ async function checkPackage(request, id) {
     }
   }
   if (!rpc || rpc.id !== id) throw new Error('Missing MCP response');
-  if (rpc.error) throw new Error(rpc.error.message || 'MCP error');
+  if (rpc.error) throw new Error(`${rpc.error.message || 'MCP error'}${/api.?key|unauthori[sz]ed|forbidden/i.test(rpc.error.message ?? '') ? ': check DEP_BOUNCER_API_KEY' : ''}`);
   const result = rpc.result;
-  if (result?.isError) throw new Error(result.content?.[0]?.text || 'MCP tool error');
+  if (result?.isError) throw new Error(`${result.content?.[0]?.text || 'MCP tool error'}${/api.?key|unauthori[sz]ed|forbidden/i.test(result.content?.[0]?.text ?? '') ? ': check DEP_BOUNCER_API_KEY' : ''}`);
   const report = JSON.parse(result?.content?.[0]?.text ?? 'null');
   if (!report || !['ALLOW', 'REVIEW', 'BLOCK'].includes(report.verdict)
     || typeof report.package !== 'string' || typeof report.version !== 'string'
@@ -81,31 +85,38 @@ async function main() {
     payload = JSON.parse(input);
   } catch {
     const reason = unavailable('Invalid hook JSON', '(unknown command)');
-    output(failClosed ? 'ask' : 'allow', reason);
+    if (failClosed) output('ask', reason);
     return;
   }
-  if (!cursor && payload?.tool_name !== 'Bash') return;
+  if (!payload || typeof payload !== 'object' || Array.isArray(payload)
+    || (!cursor && typeof payload.tool_name !== 'string')) {
+    const reason = unavailable('Invalid hook payload', '(unknown command)');
+    if (failClosed) output('ask', reason);
+    return;
+  }
+  if (!cursor && payload.tool_name !== 'Bash') return;
   const command = cursor ? payload?.command : payload?.tool_input?.command;
   if (typeof command !== 'string') {
     const reason = unavailable('Missing shell command', '(unknown command)');
-    output(failClosed ? 'ask' : 'allow', reason);
+    if (failClosed) output('ask', reason);
     return;
   }
-  const unique = new Map(findInstalls(command).map(request => [JSON.stringify([request.name, request.spec]), request]));
-  const requests = [...unique.values()].slice(0, 8);
-  if (!requests.length) {
-    if (cursor) process.stdout.write('{"permission":"allow"}\n');
-    return;
+  const parsed = parseCommand(command);
+  const unique = new Map(parsed.installs.map(request => [JSON.stringify([request.name, request.spec]), request]));
+  const requests = [...unique.values()];
+  const results = [];
+  // Bound request concurrency without dropping packages from large install commands.
+  for (let start = 0; start < requests.length; start += 5) {
+    results.push(...await Promise.allSettled(requests.slice(start, start + 5).map((request, index) => checkPackage(request, start + index + 1))));
   }
-  const results = await Promise.allSettled(requests.map((request, index) => checkPackage(request, index + 1)));
   const reports = [], warnings = [];
   for (const [index, result] of results.entries()) {
     if (result.status === 'fulfilled') reports.push(result.value);
     else warnings.push(unavailable(`${requests[index].name}: ${result.reason?.message || String(result.reason)}`, command));
   }
   const { decision, reason } = decide(reports);
-  output(decision === 'deny' ? 'deny' : warnings.length && failClosed ? 'ask' : decision,
-    [reason, ...warnings].filter(Boolean).join('\n'));
+  output(decision === 'deny' ? 'deny' : parsed.uncertain || (warnings.length && failClosed) ? 'ask' : decision,
+    [reason, ...warnings, ...(parsed.uncertain ? ['Dep Bouncer could not fully parse or verify this package install; ask the user before running it.'] : [])].filter(Boolean).join('\n'));
 }
 
 await main();

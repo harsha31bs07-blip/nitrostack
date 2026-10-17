@@ -2,7 +2,7 @@
 
 5/5 replayed hijacks blocked; 200 popular releases: 199 ALLOW, 1 REVIEW, 0 BLOCK
 
-Generated: 2026-10-16T17:51:41.430Z. Popular checks request the current npm latest tag; resolved versions and per-call timestamps are in results.json.
+Generated: 2026-10-17T03:36:24.018Z. Popular checks request the current npm latest tag; resolved versions and per-call timestamps are in results.json.
 
 Replays use labelled reconstructions. Popular packages are a presumed-healthy sample, not independently verified ground truth; REVIEW and BLOCK counts are candidate false positives. Errors are excluded from verdict counts. Durations include any rate-limit wait and retry.
 
@@ -10,17 +10,17 @@ Replays use labelled reconstructions. Popular packages are a presumed-healthy sa
 
 | ID / package | Version | Verdict | Score | Top 3 findings / error | Duration (ms) |
 |---|---|---|---:|---|---:|
-| axios | 1.14.1 | BLOCK | 100 | New dependency plain-crypto-js looks like a malware drop; Provenance dropped: previous release 1.14.0 was built and signed by CI, this one was not; Published by the personal account "jasonsaayman" instead of the package's CI (trusted publishing) | 70 |
-| keyv | 6.0.0 | BLOCK | 100 | Suspicious exec in release code; Suspicious ai-agent-abuse in release code; Suspicious obfuscation in release code | 102 |
+| axios | 1.14.1 | BLOCK | 100 | New dependency plain-crypto-js looks like a malware drop; Provenance dropped: previous release 1.14.0 was built and signed by CI, this one was not; Published by the personal account "jasonsaayman" instead of the package's CI (trusted publishing) | 65 |
+| keyv | 6.0.0 | BLOCK | 100 | Suspicious exec in release code; Suspicious ai-agent-abuse in release code; Suspicious obfuscation in release code | 101 |
 | chalk | 5.6.1 | BLOCK | 100 | Suspicious wallet in release code; Suspicious obfuscation in release code; New publisher "qix" has never released this package before | 7 |
-| nx | 21.5.0 | BLOCK | 100 | Suspicious credentials in release code; Suspicious exfil in release code; Suspicious ai-agent-abuse in release code | 24 |
-| tinycolor | 4.1.1 | BLOCK | 100 | Suspicious credentials in release code; Suspicious exfil in release code; Suspicious persistence in release code | 102 |
+| nx | 21.5.0 | BLOCK | 100 | Suspicious credentials in release code; Suspicious exfil in release code; Suspicious ai-agent-abuse in release code | 22 |
+| tinycolor | 4.1.1 | BLOCK | 100 | Suspicious credentials in release code; Suspicious exfil in release code; Suspicious persistence in release code | 80 |
 
 ## Non-ALLOW popular releases
 
 | ID / package | Version | Verdict | Score | Top 3 findings / error | Duration (ms) |
 |---|---|---|---:|---|---:|
-| typescript | 7.0.2 | REVIEW | 45 | New publisher "microsoft1es" has never released this package before; Suspicious exec in release code; Suspicious obfuscation in release code | 10261 |
+| typescript | 7.0.2 | REVIEW | 45 | New publisher "microsoft1es" has never released this package before; Suspicious exec in release code; Suspicious obfuscation in release code | 11750 |
 
 ## ALLOW popular releases
 

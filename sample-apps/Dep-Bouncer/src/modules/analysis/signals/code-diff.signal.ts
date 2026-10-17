@@ -23,7 +23,7 @@ export class CodeDiffSignal implements Signal {
   async evaluate(ctx: AnalysisContext & { signal?: AbortSignal; deadline?: number }): Promise<Finding[]> {
     const incomplete: Finding[] = [];
     const warn = (reason: string, evidence: string[] = []) => incomplete.push({ signal: this.id,
-      severity: 'warn', title: `Code comparison incomplete: ${reason}`, evidence, weight: SEVERITY_WEIGHT.warn });
+      severity: 'warn', title: `Code comparison incomplete: ${reason}`, evidence, weight: SEVERITY_WEIGHT.warn, incomplete: true });
     try {
       const previous = ctx.baseline[0];
       const target = await ctx.loadFiles(ctx.target.version);
@@ -76,7 +76,7 @@ export class CodeDiffSignal implements Signal {
         if (bytes.byteLength > MAX_SOURCE_SCAN) {
           // Big bundles (typescript.js is ~9 MB) are normal; note the partial scan without risk weight.
           incomplete.push({ signal: this.id, severity: 'info', title: `Code scanned partially: ${path}`,
-            evidence: [`${bytes.byteLength} bytes; scanned first 2 MB and last 256 KB`], weight: 0 });
+            evidence: [`${bytes.byteLength} bytes; scanned first 2 MB and last 256 KB`], weight: 0, incomplete: true });
           return Buffer.concat([bytes.subarray(0, SOURCE_HEAD), Buffer.from('\n'), bytes.subarray(-SOURCE_TAIL)]);
         }
         return Buffer.from(bytes.buffer, bytes.byteOffset, bytes.byteLength);

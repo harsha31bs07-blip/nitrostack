@@ -28,6 +28,8 @@ export interface Report {
   summary: string;
   findings: Finding[];
   notes: string[];
+  /** Preserves incomplete coverage even when zero-weight findings become note titles. */
+  incomplete?: true;
   otherTools: OtherTools;
   safeVersion?: { version: string; reason: string };
   publishedAt?: string;
@@ -236,7 +238,7 @@ export class BouncerService {
         resolved,
         verdict: report.verdict,
         score: report.score,
-        reason: `${registryName !== name ? `alias for ${registryName}@${resolved}: ` : ''}${report.findings[0]?.title ?? report.notes.find(isIncomplete) ?? 'no risk signals'}`,
+        reason: `${registryName !== name ? `alias for ${registryName}@${resolved}: ` : ''}${report.findings[0]?.title ?? (report.incomplete ? report.notes[0] : undefined) ?? 'no risk signals'}`,
         safeVersion: report.safeVersion?.version,
       };
     } catch (err) {
@@ -287,7 +289,7 @@ export class BouncerService {
         recommendation: 'REVIEW',
         reasons: [...(implicitNative ? [nativeNote] : []),
           ...(scriptFindings.length ? scriptFindings : report.findings).slice(0, 3).map((f) => f.title),
-          ...report.notes.filter(isIncomplete)].slice(0, 4),
+          ...(report.incomplete ? report.notes : [])].slice(0, 4),
       };
     }
     // Same script as the releases before it, from the same kind of publisher, no new code risk.
@@ -357,7 +359,7 @@ export class BouncerService {
       if (isSafe(r)) {
         return { package: name, range, safeVersion: v, verdict: r.verdict, skipped };
       }
-      skipped.push({ version: v, verdict: r.verdict, reason: r.findings[0]?.title ?? r.notes.find(isIncomplete) ?? r.verdict });
+      skipped.push({ version: v, verdict: r.verdict, reason: r.findings[0]?.title ?? r.notes[0] ?? r.verdict });
     }
     return {
       package: name,
@@ -419,7 +421,7 @@ export class BouncerService {
     const malware = advisories.advisories.filter(a => a.malicious);
     if (malware.length) findings.push(finding('known-advisory', 'critical',
       `Listed as malware in OSV (${malware[0].id})`, malware.map(a => `${a.id}: ${a.summary ?? ''}`)));
-    if (!advisories.available) findings.push(finding('known-advisory', 'warn', 'check incomplete: OSV unavailable', [advisories.error ?? 'OSV could not be reached']));
+    if (!advisories.available) findings.push({ ...finding('known-advisory', 'warn', 'check incomplete: OSV unavailable', [advisories.error ?? 'OSV could not be reached']), incomplete: true });
     const verdict = decide(findings);
     return this.report(packument.name, version, own(packument.time, version), verdict, result.checks, advisories, false);
   }
@@ -534,6 +536,7 @@ export class BouncerService {
       summary: summarize(name, version, verdict.verdict, verdict.findings),
       findings: verdict.findings,
       notes: verdict.notes.map((n) => n.title),
+      ...([...verdict.findings, ...verdict.notes].some(f => f.incomplete) ? { incomplete: true as const } : {}),
       otherTools: {
         osv: !advisories.available
           ? 'OSV unreachable right now'
@@ -598,12 +601,8 @@ function isPlainObject(value: unknown): value is Record<string, unknown> {
     && (Object.getPrototypeOf(value) === Object.prototype || Object.getPrototypeOf(value) === null);
 }
 
-function isIncomplete(title: string): boolean {
-  return /^(?:Code comparison incomplete|check incomplete)/i.test(title);
-}
-
 function isSafe(report: Report): boolean {
-  return report.verdict === 'ALLOW' && !report.findings.some(f => isIncomplete(f.title)) && !report.notes.some(isIncomplete);
+  return report.verdict === 'ALLOW' && !report.incomplete && !report.findings.some(f => f.incomplete);
 }
 
 function summarize(name: string, version: string, verdict: Verdict, findings: Finding[]): string {
